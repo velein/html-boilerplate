@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Compiled assets
+web
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# OS-specific garbage
+*~
+.DS_Store
+Thumbs.db
+thumbs.db
+
+# Backstop data files.
+dev/backstop_data/
+
+# Yarn/NPM files
+yarn-error.log
+package-lock.json

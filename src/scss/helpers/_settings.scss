@@ -1,0 +1,16 @@
+@import "include-media/dist/include-media";
+
+//fonts
+$font-roboto: "Roboto", sans-serif;
+
+// colors
+$color-black: #000000;
+$color-white: #ffffff;
+
+//breakpoints
+$breakpoints: (
+    "sm": 480px,
+    "md": 768px,
+    "lg": 1024px,
+    "xl": 1200px,
+);

@@ -1,0 +1,22 @@
+<project name="project" default="build">
+    <target name="build">
+        <echo>Building project...</echo>
+
+        <!-- Install dependencies -->
+        <exec executable="yarn" failonerror="true">
+            <arg value="--pure-lockfile" />
+        </exec>
+
+        <!-- Build project -->
+        <exec executable="yarn" failonerror="true">
+            <arg value="build" />
+        </exec>
+
+        <!-- Create filepack -->
+        <exec executable="yarn" failonerror="true">
+            <arg value="filepack" />
+        </exec>
+
+        <echo>Building... Done. Filepack has been created</echo>
+    </target>
+</project>

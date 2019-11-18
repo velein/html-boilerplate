@@ -1,0 +1,26 @@
+// Additonal reset rules that are not set in normalize.css
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+button {
+    &:focus,
+    &:active {
+        outline: none;
+
+        & > * {
+            position: relative;
+        }
+    }
+}
+
+figure {
+    margin: 0;
+}
+
+input {
+    border-radius: 0;
+}

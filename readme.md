@@ -1,4 +1,4 @@
-# Chopstart Markup
+# HTML Boilerplate
 
 Simple bolerplate for markup (HTML, JS & CSS) projects.
 

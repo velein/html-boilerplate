@@ -10,7 +10,7 @@ const slugify = string =>
         .join("-");
 
 module.exports = {
-    path: "src/partials",
+    path: "src/template",
     data: {
         imageSrc,
         svg,

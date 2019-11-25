@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "layout/default.html" %}
+
 {% set pageTitle = "Homepage" %}
-{% include 'global/page-head.html' %}
 
-<body class="page-about">
-    {% include "global/header.html" %}
-
-    <main class="page-content">
-        {% include "modules/example.html" %}
-    </main>
-
-    {% include "global/footer.html" %}
-    {% include "global/footer-scripts.html" %}
-</body>
-
-</html>
+{% block content %}
+    {% include "modules/example.html" %}
+{% endblock %}

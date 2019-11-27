@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include 'page/head.html' %}
+{% include 'page/head.nj' %}
 
 <body class="page">
-    {% include "common/header.html" %}
+    {% include "common/header.nj" %}
 
     <main class="page-content">
         {% block content %}{% endblock %}
     </main>
 
-    {% include "common/footer.html" %}
-    {% include "page/footer.html" %}
+    {% include "common/footer.nj" %}
+    {% include "page/footer.nj" %}
 </body>
 
 </html>

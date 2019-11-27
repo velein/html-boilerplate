@@ -1,0 +1,7 @@
+{% extends "layout/default.nj" %}
+
+{% set pageTitle = "Homepage" %}
+
+{% block content %}
+    {% include "modules/example.nj" %}
+{% endblock %}

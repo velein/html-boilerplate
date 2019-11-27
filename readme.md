@@ -23,7 +23,7 @@ yarn start
 
 ### 🔷 Templating HTML files
 
-You can leverage the power of templating system with built-in nunjucks support. Nunjucks allows you to write modular and reusable code and use some cool features such as variables, loops, includes, if expressions and more. The documentation can be found [here](https://mozilla.github.io/nunjucks/templating.html). The example is located in `src/index.html`.
+You can leverage the power of templating system with built-in nunjucks support. Nunjucks allows you to write modular and reusable code and use some cool features such as variables, loops, includes, if expressions and more. The documentation can be found [here](https://mozilla.github.io/nunjucks/templating.nj). The example is located in `src/index.nj`.
 
 #### Built-in custom functions
 
@@ -72,4 +72,4 @@ Vendor/third-party files should be placed in `static` directory, e.g `static/ass
 
 #### Markup files (HTML)
 
-Source files are located in `src`. Files from `src/*.html` will be compiled to `web` directory.
+Source files are located in `src`. Files from `src/*.nj` will be compiled to `web` directory.

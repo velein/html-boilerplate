@@ -15,9 +15,6 @@ web
 Thumbs.db
 thumbs.db
 
-# Backstop data files.
-dev/backstop_data/
-
 # Yarn/NPM files
 yarn-error.log
 package-lock.json

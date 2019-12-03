@@ -27,13 +27,12 @@ You can leverage the power of templating system with built-in nunjucks support. 
 
 #### Built-in custom functions
 
-### imageSrc
+### assetSrc
 
-Returns the image folder path `web/assets/images/`.
+Returns the asset folder path `web/assets/`.
 
 ```
-<img src="{{ imageSrc('forest.jpeg') }}" alt="Example forests image">
-<img src="{{ imageSrc('directory/image.png') }}" alt="Another example">
+<img src="{{ imageSrc('images/forest.jpeg') }}" alt="Example forests image">
 ```
 
 #### svg

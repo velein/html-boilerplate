@@ -27,20 +27,17 @@ You can leverage the power of templating system with built-in nunjucks support. 
 
 #### Built-in custom functions
 
-### assetSrc
+### asset 
 
-Returns the asset folder path `web/assets/`.
+Helper which returns full path to pointed asset. Optionally accepts a second parameter
+(boolean) which allows to return a file contents instead of file path.
 
-```
-<img src="{{ imageSrc('images/forest.jpeg') }}" alt="Example forests image">
-```
-
-#### svg
-
-Allows to add inline svg from `web/assets/icons/*svg` to template simply by svg `name`.
+Examples
 
 ```
-{{ svg('lock') | safe }}
+<img src="{{ asset('images/forest.jpeg') }}" alt="Example forests image">
+<script src="{{ asset('css/vendors/normalize.css') }}">
+{{ asset('icons/lock.svg') | safe }}
 ```
 
 ### 🔧 Browser support

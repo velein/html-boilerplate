@@ -10,7 +10,7 @@
     </main>
 
     {% include "common/footer.nj" %}
-    {% include "page/footer.nj" %}
+    {% include "page/footerScripts.nj" %}
 </body>
 
 </html>

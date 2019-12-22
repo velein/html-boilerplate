@@ -9,9 +9,9 @@
         "filepack": "bestzip web/filepack.zip web/"
     },
     "devDependencies": {
-        "@babel/core": "^7.7.5",
+        "@babel/core": "^7.7.7",
         "@babel/polyfill": "^7.7.0",
-        "@babel/preset-env": "^7.7.6",
+        "@babel/preset-env": "^7.7.7",
         "babel-loader": "^8.0.6",
         "bestzip": "^2.1.5",
         "browser-sync": "^2.26.7",
@@ -22,7 +22,7 @@
         "gulp-sass": "^4.0.2",
         "include-media": "^1.4.9",
         "require-dir": "^1.2.0",
-        "webpack": "^4.41.2",
+        "webpack": "^4.41.4",
         "webpack-stream": "^5.2.1"
     },
     "dependencies": {}

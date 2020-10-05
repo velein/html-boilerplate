@@ -9,21 +9,21 @@
         "filepack": "bestzip web/filepack.zip web/"
     },
     "devDependencies": {
-        "@babel/core": "^7.9.0",
-        "@babel/polyfill": "^7.8.7",
-        "@babel/preset-env": "^7.9.0",
+        "@babel/core": "^7.11.1",
+        "@babel/polyfill": "^7.10.4",
+        "@babel/preset-env": "^7.11.0",
         "babel-loader": "^8.1.0",
-        "bestzip": "^2.1.5",
-        "browser-sync": "^2.26.7",
+        "bestzip": "^2.1.6",
+        "browser-sync": "^2.26.12",
         "core-js": "3",
         "gulp": "^4.0.2",
         "gulp-beautify": "^3.0.0",
         "gulp-nunjucks-render": "^2.2.3",
-        "gulp-sass": "^4.0.2",
+        "gulp-sass": "^4.1.0",
         "include-media": "^1.4.9",
-        "npm-check-updates": "^4.0.4",
+        "npm-check-updates": "^7.0.4",
         "require-dir": "^1.2.0",
-        "webpack": "^4.42.0",
+        "webpack": "^4.44.1",
         "webpack-stream": "^5.2.1"
     }
 }

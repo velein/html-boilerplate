@@ -1,13 +1,13 @@
 const fs = require("fs");
 
-const asset = (filePath, fileContents = false) => 
+const asset = (filePath, fileContents = false) =>
     fileContents
-        ? fs.readFileSync(`web/assets/${filePath}`)
-        : `assets/${filePath}`
+        ? fs.readFileSync(`public/assets/${filePath}`)
+        : `assets/${filePath}`;
 
 module.exports = {
     path: "src/template",
     data: {
-        asset
+        asset,
     },
 };

@@ -27,7 +27,7 @@ You can leverage the power of templating system with built-in nunjucks support. 
 
 #### Built-in custom functions
 
-### asset 
+### asset
 
 Helper which returns full path to pointed asset. Optionally accepts a second parameter
 (boolean) which allows to return a file contents instead of file path.
@@ -50,22 +50,22 @@ The default brower support is set to `last 2 versions` and can be found in `pack
 
 These files should be placed in `static` directory.
 
-The static directory will be copied automatically to web directory.
+The static directory will be copied automatically to public directory.
 
-If you want an image to be in `web/assets/images/example-image.jpg` then simply place it in `static/assets/images/example-image.jpg`
+If you want an image to be in `public/assets/images/example-image.jpg` then simply place it in `static/assets/images/example-image.jpg`
 
 #### SCSS
 
-Source files are located in `src/scss/` and will be transpiled and compiled to `web/assets/css/style.css`.
+Source files are located in `src/scss/` and will be transpiled and compiled to `public/assets/css/style.css`.
 
 Vendor/third-party files should be placed in static directory, e.g `static/assets/css/vendor/normalize.css`
 
 #### JS
 
-Source files are located in `src/js/` and will be transipled and compiled to `web/assets/js/bundle.js`.
+Source files are located in `src/js/` and will be transipled and compiled to `public/assets/js/bundle.js`.
 
 Vendor/third-party files should be placed in `static` directory, e.g `static/assets/js/vendor/slick.min.js`
 
 #### Markup files (HTML)
 
-Source files are located in `src`. Files from `src/*.nj` will be compiled to `web` directory.
+Source files are located in `src`. Files from `src/*.nj` will be compiled to `public` directory.

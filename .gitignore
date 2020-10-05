@@ -2,7 +2,7 @@
 node_modules/
 
 # Compiled assets
-web
+public
 
 # Dotenv
 .env

@@ -7,5 +7,5 @@ module.exports = nunjucks = () => {
     return src("src/pages/*.+(nj|njk|nunjucks|html)")
         .pipe(nunjucksRender(nunjucksConfig))
         .pipe(beautify.html({ indent_size: 4 }))
-        .pipe(dest("web"));
+        .pipe(dest("public"));
 };

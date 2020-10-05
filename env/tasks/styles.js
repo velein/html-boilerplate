@@ -9,5 +9,5 @@ module.exports = styles = () => {
                 includePaths: ["node_modules"],
             })
         )
-        .pipe(dest("web/assets/css/"));
+        .pipe(dest("public/assets/css/"));
 };

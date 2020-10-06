@@ -16,8 +16,8 @@ export const serve = () => {
         server: publicDirectory,
     });
 
-    watch(`${sourceDirectory}/scss/**/*.scss`, styles);
+    watch(`${sourceDirectory}/scss/**/*.{scss,css}`, styles);
     watch(`${sourceDirectory}/**/*.${templatingExtensions}`, templating);
-    watch(`${sourceDirectory}/js/**/*.js`, scripts);
+    watch(`${sourceDirectory}/js/**/*.{js,ts}`, scripts);
     watch(`${staticDirectory}/**/*`, copy);
 };

@@ -1,26 +1,13 @@
 import { src, dest } from 'gulp';
+import plumber from 'gulp-plumber';
 import webpackStream from 'webpack-stream';
 
-import { publicDirectory, sourceDirectory } from '../config';
+import webpackConfig from '../../webpack.config';
 
-/** @type {import('webpack').Configuration} */
-const config = {
-    output: {
-        filename: 'bundle.js',
-    },
-    mode: 'production',
-    module: {
-        rules: [
-            {
-                test: /\.(js|jsx)$/,
-                exclude: /(node_modules)/,
-                loader: 'babel-loader',
-            },
-        ],
-    },
-};
+const { entry, output } = webpackConfig;
 
 export const scripts = () =>
-    src(`${sourceDirectory}/js/main.js`)
-        .pipe(webpackStream(config))
-        .pipe(dest(`${publicDirectory}/assets/js`));
+    src(entry)
+        .pipe(plumber())
+        .pipe(webpackStream(webpackConfig))
+        .pipe(dest(output.path));

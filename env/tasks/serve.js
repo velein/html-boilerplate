@@ -1,15 +1,24 @@
-const browserSync = require("browser-sync");
-const requireDir = require("require-dir");
-const { watch } = require("gulp");
+import { watch } from 'gulp'
+import browserSync from 'browser-sync'
 
-const { styles, scripts, static, markup } = requireDir("./");
-const browserSyncConfig = require("../config/browserSync.config");
+import { copy } from './misc'
+import { scripts } from './scripts'
+import { styles } from './styles'
+import { templating, templatingExtensions } from './templating'
 
-module.exports = serve = () => {
-    browserSync.init(browserSyncConfig);
+import { publicDirectory, sourceDirectory, staticDirectory } from '../config'
 
-    watch("src/scss/**/*.scss", styles);
-    watch("src/**/*", markup);
-    watch("src/js/**/*.js", scripts);
-    watch("static/**/*", static);
-};
+export const serve = () => {
+    browserSync.init({
+        ui: false,
+        /**  Controls whanever browser should open at BrowserSync init */
+        open: false,
+        watch: true,
+        server: publicDirectory,
+    })
+
+    watch(`${sourceDirectory}/scss/**/*.scss`, styles)
+    watch(`${sourceDirectory}/**/*.${templatingExtensions}`, templating)
+    watch(`${sourceDirectory}/js/**/*.js`, scripts)
+    watch(`${staticDirectory}/**/*`, copy)
+}

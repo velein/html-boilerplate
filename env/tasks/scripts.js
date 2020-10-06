@@ -1,14 +1,27 @@
-// Gulp Task: Scripts
-// Description:
-// Dependencies: [webpack, webpackStream, @babel/core, @babel/preset-env, babel-loader]
+import { src, dest } from 'gulp'
+// import webpack from 'webpack'
+import webpackStream from 'webpack-stream'
 
-const { src, dest } = require("gulp");
-const webpack = require("webpack");
-const webpackStream = require("webpack-stream");
-const webpackConfig = require("../config/webpack.config");
+import { publicDirectory } from '../config'
 
-module.exports = scripts = () => {
-    return src("src/js/main.js")
-        .pipe(webpackStream(webpackConfig), webpack)
-        .pipe(dest("public/assets/js"));
-};
+/** @type {import('webpack').Configuration} */
+const config = {
+    output: {
+        filename: 'bundle.js',
+    },
+    mode: 'production',
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /(node_modules)/,
+                loader: 'babel-loader',
+            },
+        ],
+    },
+}
+
+export const scripts = () =>
+    src('src/js/main.js')
+        .pipe(webpackStream(config))
+        .pipe(dest(`${publicDirectory}/assets/js`))

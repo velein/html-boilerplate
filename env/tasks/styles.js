@@ -1,13 +1,14 @@
-const { src, dest } = require("gulp");
-const sass = require("gulp-sass");
+import { src, dest } from 'gulp'
+import sass from 'gulp-sass'
 
-module.exports = styles = () => {
-    return src("src/scss/style.scss")
+import { publicDirectory, sourceDirectory } from '../config'
+
+export const styles = () =>
+    src(`${sourceDirectory}/scss/style.scss`)
         .pipe(
             sass({
-                outputStyle: "compact",
-                includePaths: ["node_modules"],
-            })
+                outputStyle: 'compact',
+                includePaths: ['node_modules'],
+            }),
         )
-        .pipe(dest("public/assets/css/"));
-};
+        .pipe(dest(`${publicDirectory}/assets/css/`))

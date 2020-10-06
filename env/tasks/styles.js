@@ -1,7 +1,7 @@
-import { src, dest } from 'gulp'
-import sass from 'gulp-sass'
+import { src, dest } from 'gulp';
+import sass from 'gulp-sass';
 
-import { publicDirectory, sourceDirectory } from '../config'
+import { publicDirectory, sourceDirectory } from '../config';
 
 export const styles = () =>
     src(`${sourceDirectory}/scss/style.scss`)
@@ -11,4 +11,4 @@ export const styles = () =>
                 includePaths: ['node_modules'],
             }),
         )
-        .pipe(dest(`${publicDirectory}/assets/css/`))
+        .pipe(dest(`${publicDirectory}/assets/css/`));

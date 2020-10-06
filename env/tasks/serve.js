@@ -1,12 +1,11 @@
-import { watch } from 'gulp'
-import browserSync from 'browser-sync'
+import { watch } from 'gulp';
+import browserSync from 'browser-sync';
 
-import { copy } from './misc'
-import { scripts } from './scripts'
-import { styles } from './styles'
-import { templating, templatingExtensions } from './templating'
-
-import { publicDirectory, sourceDirectory, staticDirectory } from '../config'
+import { copy } from './misc';
+import { publicDirectory, sourceDirectory, staticDirectory } from '../config';
+import { scripts } from './scripts';
+import { styles } from './styles';
+import { templating, templatingExtensions } from './templating';
 
 export const serve = () => {
     browserSync.init({
@@ -15,10 +14,10 @@ export const serve = () => {
         open: false,
         watch: true,
         server: publicDirectory,
-    })
+    });
 
-    watch(`${sourceDirectory}/scss/**/*.scss`, styles)
-    watch(`${sourceDirectory}/**/*.${templatingExtensions}`, templating)
-    watch(`${sourceDirectory}/js/**/*.js`, scripts)
-    watch(`${staticDirectory}/**/*`, copy)
-}
+    watch(`${sourceDirectory}/scss/**/*.scss`, styles);
+    watch(`${sourceDirectory}/**/*.${templatingExtensions}`, templating);
+    watch(`${sourceDirectory}/js/**/*.js`, scripts);
+    watch(`${staticDirectory}/**/*`, copy);
+};

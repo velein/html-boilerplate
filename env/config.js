@@ -5,7 +5,7 @@
  * @default public
  * @type {string}
  */
-export const publicDirectory = 'public'
+export const publicDirectory = 'public';
 
 /**
  * Directory where you keep every source file that should be transpiled.
@@ -13,7 +13,7 @@ export const publicDirectory = 'public'
  * @default src
  * @type {string}
  */
-export const sourceDirectory = 'src'
+export const sourceDirectory = 'src';
 
 /**
  * Directory where you keep files that should be moved into public directory
@@ -24,4 +24,4 @@ export const sourceDirectory = 'src'
  * @default static
  * @type {string}
  */
-export const staticDirectory = 'static'
+export const staticDirectory = 'static';

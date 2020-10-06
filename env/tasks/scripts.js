@@ -1,8 +1,7 @@
-import { src, dest } from 'gulp'
-// import webpack from 'webpack'
-import webpackStream from 'webpack-stream'
+import { src, dest } from 'gulp';
+import webpackStream from 'webpack-stream';
 
-import { publicDirectory } from '../config'
+import { publicDirectory, sourceDirectory } from '../config';
 
 /** @type {import('webpack').Configuration} */
 const config = {
@@ -19,9 +18,9 @@ const config = {
             },
         ],
     },
-}
+};
 
 export const scripts = () =>
-    src('src/js/main.js')
+    src(`${sourceDirectory}/js/main.js`)
         .pipe(webpackStream(config))
-        .pipe(dest(`${publicDirectory}/assets/js`))
+        .pipe(dest(`${publicDirectory}/assets/js`));

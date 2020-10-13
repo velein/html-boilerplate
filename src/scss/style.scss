@@ -1,5 +1,36 @@
 @charset 'utf-8';
 
-@import './helpers/helpers';
-@import './global/global';
-@import './modules/modules';
+//fonts
+$font-roboto: 'Roboto', sans-serif;
+
+html,
+body {
+    font-family: $font-roboto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #000000;
+}
+
+.container {
+    max-width: 960px;
+    padding: 0 15px;
+
+    margin: 0 auto;
+}
+
+.header {
+    padding: 20px 0;
+
+    border-bottom: 1px solid rgba(#000000, 0.1);
+    background-color: #000000;
+
+    &-title {
+        margin: 0;
+
+        font-size: 28px;
+        line-height: 1;
+        color: #ffffff;
+        text-transform: uppercase;
+    }
+}

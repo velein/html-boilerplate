@@ -16,6 +16,12 @@ export const serve = () => {
         server: publicDirectory,
     });
 
+    /**
+     * These watches are used by `BrowserSync` to keep an eye on file changes
+     * that happens in the project - most likely source files. When BrowserSync
+     * detects file change (by file extension) it will run watcher's callback
+     * script.
+     */
     watch(`${sourceDirectory}/scss/**/*.{scss,css}`, styles);
     watch(`${sourceDirectory}/**/*.${templatingExtensions}`, templating);
     watch(`${sourceDirectory}/js/**/*.{js,ts}`, scripts);

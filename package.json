@@ -11,8 +11,8 @@
         "build": "NODE_ENV=production gulp build $npm_package_config_env"
     },
     "devDependencies": {
-        "@babel/core": "^7.12.9",
-        "@babel/polyfill": "^7.12.1",,
+        "@babel/core": "^7.12.10",
+        "@babel/polyfill": "^7.12.1",
         "@babel/register": "^7.12.10",
         "@babel/preset-env": "^7.12.11",
         "@commitlint/cli": "^11.0.0",

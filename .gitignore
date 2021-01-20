@@ -16,5 +16,6 @@ Thumbs.db
 thumbs.db
 
 # Yarn/NPM files
+yarn.lock
 yarn-error.log
 package-lock.json

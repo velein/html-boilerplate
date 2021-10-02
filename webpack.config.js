@@ -1,5 +1,5 @@
 const path = require('path');
-const config = require('./env/config');
+const config = require('./gulpfile.js/config');
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
             },
             {
                 test: /\.(ts)$/,
-                loader: 'awesome-typescript-loader'
+                loader: 'ts-loader',
             },
         ],
     },

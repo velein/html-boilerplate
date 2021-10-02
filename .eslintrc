@@ -21,7 +21,11 @@
                 "tsx": "never"
             }
         ],
-        "@typescript-eslint/explicit-module-boundary-types": "off"
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        /** Fixes `Require statement not part of import statement` error */
+        "@typescript-eslint/no-var-requires": 0,
+        /** Fixes `Unexpected require()` */
+        "global-require": 0
     },
     "overrides": [
         {
